@@ -1,0 +1,10 @@
+name: pyt_sem
+channels:
+- conda-forge
+dependencies:
+- python>=3.6,<3.10
+- numpy
+- pytest
+- pygame
+- pylint
+- autopep8

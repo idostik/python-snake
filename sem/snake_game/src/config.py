@@ -1,0 +1,34 @@
+"""Imports"""
+from pygame.math import Vector2
+
+# BOARD
+TILE_SIZE = 40
+GRID_SIZE = 20  # number of tiles
+PLAYER_START_POS = Vector2(0, 0)  # in tiles
+ENEMY_START_POS = Vector2(GRID_SIZE - 1, GRID_SIZE - 1)  # in tiles
+PLAYER_SCORE_POS = Vector2(0, GRID_SIZE - 1)  # in tiles
+ENEMY_SCORE_POS = Vector2(GRID_SIZE - 1, GRID_SIZE - 1)  # in tiles
+SCORE_FONT_SIZE = 55
+
+# GAME STUFF
+FRAMERATE = 60
+MOVE_INTERVAL = 150  # in milliseconds
+MAX_LEN_DIFF = 10
+
+# COLORS
+BACKGROUND_COLOR = (16, 126, 125)
+MENU_BACKGROUND_COLOR = (16, 100, 150)
+FOOD_COLOR = (227, 181, 5)
+PLAYER_COLOR = (4, 75, 127)
+ENEMY_COLOR = (149, 25, 12)
+TITLE_COLOR = (0, 0, 0)
+TEXT_COLOR = (250, 250, 250)
+
+# MENU
+TITLE_FONT = "arialblack"
+TITLE_FONT_SIZE = 55
+TITLE_POS = Vector2(TILE_SIZE * GRID_SIZE // 2, TILE_SIZE * GRID_SIZE // 3)
+TEXT_FONT = "arialblack"
+TEXT_FONT_SIZE = 35
+TEXT_POS = Vector2(TILE_SIZE * GRID_SIZE // 2,
+                   (TILE_SIZE * GRID_SIZE // 4) * 2)
