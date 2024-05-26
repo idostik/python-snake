@@ -1,18 +1,20 @@
-# Hra snake proti počítači
+# Snake against AI
 
-Hra je založená na klasické hře Snake, ale na hracím poli jsou hadi dva. Jednoho ovládá hráč a druhý je ovládaný počítačem. Cílem hráče je přežít déle než protivník.
+This was my semestral project for Python programming course. I recycled my highschool idea of 2 player snake game and rewritten it in python.
 
-### Ovládání
-Po otevření hry uživatel hru spustí mezerníkem. Samotný had je ovládán pomocí šipek (hráč má defaultně modrou barvu a začíná v levém horním rohu). Hra lze ukončit pomocí klávesy Escape.
+The game is based on a classical game of snake, however there are two snakes at once. One is controlled by the player, the other by AI. The goal is to outlast the other snake.
 
-### Pravidla hry
-Had se pravidelně jednou za daný časový interval pohne ve zvoleném směru. Pokud had narazí (sám do sebe, protivníka, nebo zdi), prohraje. Který had narazil do koho je vždy jasné, protože se hadi nehýbou ve stejný čas a nemůže tak nastat sporná kolize. Pokud had sebere jídlo, které se náhodně po jednom objevuje na hrací ploše, zvětší se. Pokud je jeden z hadů výrazně menší než druhý, tak prohraje.
+### Controlls
+After running the game, start by pressing spacebar. The snake is controlled by arrows (the player is a blue snake int he top left corner). You can end the game with the escape key.
+
+### Game rules
+Snakes move in a regular time intervals in a chosen direction. If the snake collides (either with himself, oponent or the wall), he loses. Move intervals of the two snakes are offset, so that collisions are allways conclusive. If snake pick ups food that randomly spawns on the playing field, he grows longer. If one snake is greatly longer than the other, he loses.
 
 ### Requirements
-Aby program správně fungoval, je potřeba mít nainstalovaných několik balíčků. Všechno potřebné je ve virtuálním prostředí *pyt_sem*, které můžete spustit příkazem ```conda activate pyt_sem``` (pokud nemáte nainstalovanou *Minicondu*, je potřeba ji nejprve nainstalovat). Při prvním spuštěním budete možná muset nejprve virtuální prostředí aktualizovat příkazem ```conda env update``` v adresáři *sem*.
+For the program to work, you need to install cuple of packages. Everything is in the virtual environment *environment.yml*. I used [miniconda]([url](https://docs.anaconda.com/free/miniconda/)) for managing the environment - with miniconda you can activate the environment by running ```conda activate pyt_sem```. When installing for the first time you might need to update the environment by running ```conda env update``` after activating the environment.
 
-### Spuštění hry
-Po aktivování virtuálního prostředí hru spustíte z adresáře *sem* pomocí příkazu ```python3 snake_game```.
+### Run the game
+After activation of the virtual environment you can run the game from within the *sem* directory by running ```python3 snake_game```. 
 
-### Testování
-Všechny testy můžete najednou spustit z adresáře *sem* pomocí příkazu ```pytest```.
+### Tests
+There is also a couple of tests included. You can run all of them by running the ```pytest``` command in the *sem* directory.
